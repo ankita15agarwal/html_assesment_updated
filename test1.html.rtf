@@ -59,20 +59,24 @@ document.write(even+"<br>");\
 
 \fs36 <html>\
 <head>\
-    </head>\
-    <body>\
-    <script type ="text/javascript">\
-    var n,fact=1,n1;\
-        n1=n;\
-        n=prompt("enter any number")\
-        while (n>=1)\
-            \{\
-                fact=fact*n;\
-                n=n-1;\
-            \}\
-    alert ("factorial of given number is "+ fact);\
-        </script>\
-    </body>\
+  <script>\
+    function reverseArr(input) \{\
+        var ret = [];\
+        for(var i = input.length-1; i >= 0; i--) \{\
+            ret.push(input[i]);\
+        \}\
+        document.write(ret);\
+        \
+    \}\
+  </script>\
+</head>\
+<body>\
+  <script>\
+    var a = [3,5,7,8,5,9,4,7,3]\
+    var b = reverseArr(a);\
+    \
+  </script>\
+</body>\
 </html>\
 \
 
@@ -107,27 +111,22 @@ document.write(even+"<br>");\
 
 \fs36 <html>\
     <head>\
-        \
+        <title>replacing every second character of string</title>\
     </head>\
     <body>\
         <script>\
-            function Palindrome(str) \{\
-                const len = string.length;\
- \
-                for (let i = 0; i < len / 2; i++) \{\
-                    if (string[i] !== string[len - 1 - i]) \{\
-                        return 'No';\
-                    \}\
+            var str = prompt("enter a string:");\
+            str=str.split('');\
+            for (var i = 0; i <str.length; i++) \{\
+                if(i%2!=0)\
+                \{\
+                    str[i] = "Z";\
                 \}\
-                return 'Yes';\
             \}\
-            const string = prompt('Enter a string: ');\
-            const value = Palindrome(string);\
-            document.write(value);\
+            document.write(str.join(""));\
         </script>\
     </body>\
 </html>\
-\
 
 \fs48 Question 6:\
 
